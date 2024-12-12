@@ -17,16 +17,16 @@ class TicTacToe:
 
     def create_widgets(self):
         for i in range(9):
-            button = tk.Button(self.root, text="", font=("Neon 80s", 50), width=5, height=2,
+            button = tk.Button(self.root, text="", font=("ARCADECLASSIC", 50), width=5, height=2,
                                command=lambda i=i: self.make_move(i), bg="black", fg="white", borderwidth=2, relief="solid")
             button.grid(row=i // 3, column=i % 3, padx=5, pady=5)
             self.buttons.append(button)
 
-        self.score_label = tk.Label(self.root, text="", font=("Neon 80s", 18), bg='black', fg='white')  # Scritte punteggi bianche
+        self.score_label = tk.Label(self.root, text="", font=("ARCADECLASSIC", 18), bg='black', fg='white')
         self.score_label.grid(row=3, column=0, columnspan=3)
 
         
-        self.reset_label = tk.Label(self.root, text="RESET", bg='black', fg='#34eb52', font=("Neon 80s", 25))
+        self.reset_label = tk.Label(self.root, text="RESET", bg='black', fg='#34eb52', font=("ARCADECLASSIC", 25))
         self.reset_label.grid(row=4, column=0, columnspan=3, pady=(10, 20))
         self.reset_label.bind("<Button-1>", self.reset_game) 
 
